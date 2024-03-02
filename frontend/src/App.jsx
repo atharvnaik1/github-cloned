@@ -6,6 +6,8 @@ import SignUpPage from './pages/SignUpPage';
 import ExplorePage from './pages/ExplorePage';
 import Homepage from './pages/HomePage';
 import LikesPage from './pages/LikesPage';
+import CommentList from './components/CommentList';
+
 
 import Sidebar from './components/Sidebar';
 import { useAuthContext } from './context/AuthContext';
@@ -23,6 +25,7 @@ function App() {
         <Route path="/signup" element={!authUser ? <SignUpPage/> : <Navigate to={"/"}/>}/>
         <Route path="/explore" element={authUser ?<ExplorePage/> : <Navigate to={"/login"}/>}/>
         <Route path="/likes" element={authUser ?<LikesPage/>: <Navigate to={"/login"}/>}/>
+        <Route path="/comment" element={<CommentList/> }/>
       </Routes>
       <Toaster/>
       

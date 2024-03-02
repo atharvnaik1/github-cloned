@@ -6,6 +6,8 @@ import { TfiThought } from "react-icons/tfi";
 import { FaEye } from "react-icons/fa";
 import { formatMemberSince } from '../utils/functions';
 import LikeProfile from './LikeProfile';
+import CommentProfile from './CommentProfile';
+
 const ProfileInfo = ({userProfile}) => {
     // const userProfile = {
 	// 	avatar_url: "https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png?rev=2540745",
@@ -34,6 +36,7 @@ const ProfileInfo = ({userProfile}) => {
 					{/* View on Github */}
 					<div className='flex gap-2 items-center flex-col'>
 						 <LikeProfile userProfile={userProfile}/>
+						
 						<a
 							href={userProfile?.html_url}
 							target='_blank'
@@ -102,7 +105,11 @@ const ProfileInfo = ({userProfile}) => {
 					<p className='text-gray-600 font-bold text-sm'>Username</p>
 					<p className=''>{userProfile?.login}</p>
 				</div>
+				<div className='flex items-center gap-2'>
+						 <CommentProfile userProfile={userProfile}/>
+				</div>
 			</div>
+
 
 			<div className='flex flex-wrap gap-2 mx-4'>
 				{/* Followers Count */}

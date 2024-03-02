@@ -6,6 +6,7 @@ import { PiSignInBold } from "react-icons/pi";
 import { MdEditDocument } from "react-icons/md";
 import Logout from "./Logout";
 import { useAuthContext } from "../context/AuthContext";
+import { FaComment } from 'react-icons/fa';
 
 const Sidebar = () => {
 	const {authUser} = useAuthContext();
@@ -69,6 +70,14 @@ const Sidebar = () => {
 						<Logout />
 					</div>
 				)}
+				
+					<Link
+						to='/comment'
+						className='p-1.5 focus:outline-nones transition-colors duration-200 rounded-lg hover:bg-gray-800'
+					>
+						<FaComment size={25} />
+					</Link>
+				
 			</nav>
 		</aside>
 	);
