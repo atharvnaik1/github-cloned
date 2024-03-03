@@ -49,8 +49,7 @@ app.use(cors());
 app.use("/api/auth",authRoutes)
 app.use("/api/users",userRoutes)
 app.use("/api/explore",exploreRoutes)
-app.use('/api', commentRoutes);
-app.use('/api', commentRoutes);
+app.use('/api/comment', commentRoutes);
 
 
 

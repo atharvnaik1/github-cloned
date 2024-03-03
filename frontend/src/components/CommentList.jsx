@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import toast from 'react-hot-toast';
 
-const CommentList = ({ username }) => {
+
+const CommentList = () => {
     const [comments, setComments] = useState([]);
   
     useEffect(() => {
       const fetchComments = async () => {
         try {
-          const response = await axios.get(`/api/comments/${username}`);
+          const response = await axios.get("/api/comments/");
           setComments(response.data.comments);
         } catch (error) {
           console.error('Error fetching comments:', error);
@@ -24,9 +26,10 @@ const CommentList = ({ username }) => {
     return () => {
       socket.off('newComment');
     };
-  }, [username]);
+    fetchComments();
+  }, []);
   
-      fetchComments();
+      
   
    
   
