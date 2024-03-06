@@ -12,9 +12,9 @@ import authRoutes from "./routes/auth.route.js";
 
 import connectMongoDB from './db/connectMongoDB.js';
 import http from 'http';
-import { Server } from 'socket.io';
-import { addComment,getComments } from './controllers/comment.controller.js';
-import commentRoutes from './routes/comment.routes.js';
+// import { Server } from 'socket.io';
+// import { addComment,getComments } from './controllers/comment.controller.js';
+// import commentRoutes from './routes/comment.routes.js';
 
 
 dotenv.config();
@@ -28,15 +28,15 @@ const io = new Server(server);
 
 // console.log("dirname",__dirname);
 
-io.on('connection', (socket) => {
-    console.log('A user connected:', socket.id);
-    socket.on('addComment', (data) => {
-        // Attach the data to the socket object
-        socket.data = data;
-        // Call the addComment controller function
-        addComment(io, socket);
-      });
-    });
+// io.on('connection', (socket) => {
+//     console.log('A user connected:', socket.id);
+//     socket.on('addComment', (data) => {
+//         // Attach the data to the socket object
+//         socket.data = data;
+//         // Call the addComment controller function
+//         addComment(io, socket);
+//       });
+//     });
 app.use(session({ secret: 'keyboard cat', resave: false, saveUninitialized: false }));
 // Initialize Passport!  Also use passport.session() middleware, to support
 // persistent login sessions (recommended).
