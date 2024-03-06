@@ -26,9 +26,9 @@ const CommentList = () => {
     return () => {
       socket.off('newComment');
     };
-    fetchComments();
+    
   }, []);
-  
+  fetchComments();
       
   
    

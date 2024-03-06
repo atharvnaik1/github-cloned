@@ -1,6 +1,7 @@
 // controllers/comment.controller.js
 
 import User from "../models/user.model.js";
+import { socket,io } from "socket.io";
 
 export const addComment = async (io, socket) => {
   try {
