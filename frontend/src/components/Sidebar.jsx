@@ -71,12 +71,12 @@ const Sidebar = () => {
 					</div>
 				)}
 				
-					<Link
+					{/* <Link
 						to='/comment'
 						className='p-1.5 focus:outline-nones transition-colors duration-200 rounded-lg hover:bg-gray-800'
 					>
 						<FaComment size={25} />
-					</Link>
+					</Link> */}
 				
 			</nav>
 		</aside>

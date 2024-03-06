@@ -6,7 +6,7 @@ import SignUpPage from './pages/SignUpPage';
 import ExplorePage from './pages/ExplorePage';
 import Homepage from './pages/HomePage';
 import LikesPage from './pages/LikesPage';
-import CommentList from './components/CommentList';
+// import CommentList from './components/CommentList';
 
 
 import Sidebar from './components/Sidebar';
