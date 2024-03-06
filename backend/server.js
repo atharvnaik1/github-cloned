@@ -24,7 +24,7 @@ const PORT =process.env.PORT || 5000;
 const __dirname =path.resolve();
 
 const server = http.createServer(app);
-const io = new Server(server);
+// const io = new Server(server);
 
 // console.log("dirname",__dirname);
 
