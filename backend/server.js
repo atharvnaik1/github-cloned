@@ -12,6 +12,8 @@ import authRoutes from "./routes/auth.route.js";
 
 import connectMongoDB from './db/connectMongoDB.js';
 import http from 'http';
+import job from "./cron.js";
+
 // import { Server } from 'socket.io';
 // import { addComment,getComments } from './controllers/comment.controller.js';
 // import commentRoutes from './routes/comment.routes.js';
