@@ -23,6 +23,9 @@ dotenv.config();
 const app =express();
 
 const PORT =process.env.PORT || 5000;
+
+job.start();
+
 const __dirname =path.resolve();
 
 const server = http.createServer(app);
