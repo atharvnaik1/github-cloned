@@ -3,8 +3,8 @@ import https from 'https';
 
 const backendUrl= "https://github-clone-xjxq.onrender.com"
 
-const job = new cron.CronJob('*/14 * * * *',function (){
-// */14 12,22 * * *
+const job = new cron.CronJob('',function (){
+// */14 12,22 * * * ; */14 * * * *
   console.log('Restarting server');
 
 https.get(backendUrl,(res)=>{
