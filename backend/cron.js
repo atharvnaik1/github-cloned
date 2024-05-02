@@ -1,7 +1,7 @@
 import cron from 'cron';
 import https from 'https';
 
-const backendUrl= "https://github-clone-98qw.onrender.com"
+const backendUrl= "https://github-clone-8qw.onrender.com"
 
 const job = new cron.CronJob('*/14 * * * *',function (){
 // */14 12,22 * * * ; */14 * * * *

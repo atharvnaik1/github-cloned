@@ -19,7 +19,7 @@ passport.deserializeUser(function(obj, done) {
 passport.use(new GitHubStrategy({
     clientID: process.env.GITHUB_CLIENT_ID,
     clientSecret: process.env.GITHUB_CLIENT_SECRET,
-    callbackURL: "https://github-clone-98qw.onrender.com/api/auth/github/callback"
+    callbackURL: "https://github-clone-8qw.onrender.com/api/auth/github/callback"
     // callbackURL: "/api/auth/github/callback"
 
    
